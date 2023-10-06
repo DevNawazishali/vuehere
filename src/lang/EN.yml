@@ -1,0 +1,22 @@
+cancel: "cancel"
+metamask:
+  - "Install Metamask first! "
+  - "Please open Metamask and unlock your account! "
+wallet: "Please log in to the wallet"
+connectWallet: "Connect Wallet"
+
+all: "All"
+
+approve: "APPROVE"
+rule: "rule"
+
+receive: "receive"
+
+menu:
+  - 'HOME'
+  - 'MYSTERY PACK'
+  - 'MARKET'
+  - 'GAME'
+  - 'EARN'
+  - 'LAUNCHPAD'
+  - 'INFO'

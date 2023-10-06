@@ -1,0 +1,15 @@
+cancel: "キャンセル"
+
+metamask:
+  - "最初にMetamaskをインストールしてください！"
+  - "Metamaskを開いてアカウントのロックを解除してください！"
+wallet: "ウォレットにログインしてください"
+
+approve: "承認"
+buy: "購入"
+receive: "受信"
+exchange: "交換"
+
+all: "すべて"
+connect: "ウォレットを接続"
+rule: "ルール"

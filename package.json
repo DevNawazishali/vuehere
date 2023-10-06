@@ -1,0 +1,116 @@
+{
+  "name": "BOMBERQUEST",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "vue-cli-service start",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "@toruslabs/torus-embed": "^1.10.15",
+    "@walletconnect/client": "^2.0.0-beta.19",
+    "@walletconnect/web3-provider": "^1.4.1",
+    "cookies-js": "^1.2.3",
+    "core-js": "^3.12.1",
+    "decimal.js": "^10.2.1",
+    "element-ui": "^2.15.6",
+    "style-resources-loader": "^1.4.1",
+    "vue": "^2.6.11",
+    "vue-cli-plugin-style-resources-loader": "^0.1.5",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0",
+    "web3": "^1.5.2",
+    "web3modal": "^1.9.3",
+    "yaml-loader": "^0.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.14.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.12",
+    "@babel/preset-env": "^7.16.0",
+    "@kazupon/vue-i18n-loader": "^0.5.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "axios": "^0.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "eslint-plugin-vue-i18n": "^0.1.1",
+    "json-loader": "^0.5.7",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^8.1.4",
+    "moment": "^2.29.1",
+    "svg-sprite-loader": "^6.0.9",
+    "vue-i18n": "^8.25.0",
+    "vue-resource": "^1.5.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "plugin:vue-i18n/recommended",
+      "@vue/airbnb"
+    ],
+    "rules": {
+      "vue-i18n/no-dynamic-keys": "error",
+      "linebreak-style": "off",
+      "vue-i18n/no-unused-keys": [
+        "error",
+        {
+          "extensions": [
+            ".js",
+            ".vue"
+          ]
+        }
+      ],
+      "max-len": [
+        1,
+        1000
+      ],
+      "vue/no-unused-components": "off",
+      "vue/require-component-is": "off",
+      "vue/no-parsing-error": "off"
+    },
+    "settings": {
+      "vue-i18n": {
+        "localeDir": "./path/to/locales/*.yml"
+      }
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 5 versions",
+    "Android >= 4.0",
+    "not ie <= 8"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

@@ -1,0 +1,455 @@
+@import "colors.less";
+
+.th-dialog {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+
+  .dialog-wrap {
+    min-width: 500px;
+    background: white;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: calc(100% - 30px);
+    max-width: calc(100% - 30px);
+
+    @media @mobile {
+      min-width: 300px;
+      width: 95%;
+    }
+
+    .dialog-head {
+      padding: 2rem 2rem;
+      box-sizing: border-box;
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 1.5rem 1.5rem 0 0;
+      color: #020202;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #dddddd;
+
+      .close {
+        font-size: 1.8rem;
+        color: @themeColor;
+        cursor: pointer;
+      }
+
+      span {
+        font-size: 2.6rem;
+      }
+    }
+
+    .dialog-body {
+      min-height: 150px;
+      padding: 3rem 2rem;
+      box-sizing: border-box;
+      overflow-x: auto;
+
+      @media @mobile {
+        width: 100%;
+      }
+    }
+
+    .dialog-footer {
+      text-align: right;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      border-radius: 0 0 1.5rem 1.5rem;
+      border-top: 1px solid #dddddd;
+
+      .th-button {
+        min-width: 16rem;
+        border-radius: 4px;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+.ModelStyle1 {
+  box-shadow: @shadowCx;
+}
+
+.ModelStyle2 {
+  box-shadow: @shadowCe;
+}
+
+.max-input {
+  width: 100%;
+  position: relative;
+
+  .input {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 3rem;
+    height: 5rem;
+    border: 1px solid #505050;
+    border-radius: 4px;
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    color: #020202;
+    font-size: 1.8rem;
+  }
+
+  .max {
+    height: 2.6rem;
+    line-height: 2.4rem;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    right: 1rem;
+    border-radius: 3px;
+    margin: auto;
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    background: #3f3f3f;
+    color: white;
+  }
+
+  .unit {
+    height: 2.2rem;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    right: 1rem;
+    margin: auto;
+    color: white;
+  }
+}
+
+.th-button {
+  // border: 1px solid #888888;
+  // background: rgba(78, 132, 147, 0.2);
+  // border-radius: 1rem;
+  // padding: 1.2rem 0;
+  // min-width: 20rem;
+  // outline: none;
+  // cursor: pointer;
+  // font-size: 2rem;
+  // margin: 0 1rem;
+  // font-weight: 600;
+
+  &[disabled] {
+    color: #535353 !important;
+    background: #c7c7c7 !important;
+    cursor: not-allowed;
+    box-shadow: none !important;
+  }
+
+  @media @mobile {
+    font-size: 1.8rem;
+    //padding: 1rem 0;
+  }
+}
+
+.notOwned {
+  -webkit-filter: grayscale(100%);
+  /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
+}
+
+.el-select {
+  color: white;
+  background: #E68522 !important;
+
+  height: 8.6rem;
+  border-radius: 1rem;
+
+  @media @mobile {
+    width: 10rem;
+    height: 3.2rem;
+    border-radius: .5rem;
+
+    .el-input__icon {
+      color: white;
+      line-height: 3.2rem;
+    }
+  }
+
+  input {
+    border: none;
+    font-size: 1.8rem;
+    height: 8.6rem !important;
+
+    @media @mobile {
+      font-size: 1.2rem;
+      height: 3.2rem !important;
+    }
+  }
+
+  .el-input, .el-input--suffix {
+    height: 8.6rem;
+
+    @media @mobile {
+      line-height: 3.2rem;
+      height: 3.2rem;
+    }
+
+    .el-select__caret {
+      font-size: 3rem;
+      color: white;
+
+      @media @mobile {
+        font-size: 1.2rem;
+      }
+    }
+
+    .el-input__inner {
+      color: white !important;
+      min-width: 17rem;
+      font-weight: bold;
+      text-align: left;
+      font-family: PlayfairDisplay-Bold, serif;
+
+      @media @mobile {
+        min-width: 8rem;
+        line-height: 3rem;
+        height: 3rem !important;
+        border-radius: .5rem !important;
+        background: #E68522 !important;
+      }
+    }
+  }
+}
+
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: rgb(255, 255, 255);
+}
+
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
+.el-select .el-input__inner:focus {
+  border-color: rgb(255, 255, 255);
+}
+
+.el-select-dropdown {
+  border: none;
+  background: #E68522;
+
+  .el-scrollbar {
+    .el-select-dropdown__wrap {
+      .el-select-dropdown__list {
+        .el-select-dropdown__item {
+          background: rgba(0, 0, 0, 0);
+          color: white;
+          height: 6rem;
+          text-align: center;
+          line-height: 6rem;
+          font-family: PlayfairDisplay-Bold, serif;
+          @media @mobile {
+            font-size: 1.4rem;
+            height: 2.6rem;
+            line-height: 2.6rem;
+          }
+        }
+
+        .selected {
+          color: #d43b81;
+        }
+      }
+    }
+  }
+}
+
+.el-select-dropdown__item {
+  font-size: 2.4rem;
+
+  @mobile @mobile {
+  font-size: 1.2rem;
+}
+}
+
+.fillBox {
+  height: 0;
+  padding: 0;
+  box-shadow: none;
+  opacity: 0;
+  margin: 0;
+}
+
+#WEB3_CONNECT_MODAL_ID {
+  // margin-top: 40px !important;
+
+  .web3modal-modal-lightbox {
+    z-index: 99 !important;
+  }
+}
+
+.page-wrapper {
+  margin-top: 10rem;
+  margin-bottom: 8.6rem;
+  background: #0D152B;
+  text-align: center;
+
+  @media @mobile {
+    width: 30rem;
+    margin-top: 4.3rem;
+  }
+}
+
+.connect-btn {
+  width: 20rem;
+  height: 6rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+  background: #4ed6cd;
+  border-radius: 1rem;
+}
+
+.cardOpenedDialog {
+
+  border-radius: 1rem;
+  z-index: 13 !important;
+
+  @media @mobile {
+
+    .dialog-wrapper {
+      padding: 0 !important;
+    }
+
+    .dialog-btn {
+      display: none;
+    }
+
+    .dialog-img {
+      width: 9rem !important;
+    }
+  }
+
+  .el-dialog {
+    width: 90rem;
+    border-radius: 1rem;
+    background: #e1e1e1;
+
+    @media @mobile {
+      width: 90% !important;
+    }
+  }
+
+  .el-dialog__body {
+    @media @mobile {
+      padding-top: 0;
+    }
+  }
+
+  .dialog-btn {
+    width: 100%;
+    height: 6.8rem;
+    background: #4ed6cd;
+    box-shadow: inset 0.2rem 0.2rem 0.6rem 0.1rem #c3fffb;
+    border-radius: 1rem;
+    font-size: 2.1rem;
+    color: #ffffff;
+    margin-top: 10rem;
+  }
+
+
+  .dialog-wrapper {
+    padding: 0 2.9rem 3.8rem 2.9rem;
+  }
+
+  .form-wrapper {
+    width: 57%;
+    padding-top: 10%;
+
+    @media @mobile {
+      padding-top: 0 !important;
+    }
+  }
+
+  .el-input__inner {
+    height: 5rem;
+    font-size: 2.4rem;
+
+    @media @mobile {
+      height: 3rem;
+      font-size: 1.6rem;
+      line-height: 3rem;
+    }
+  }
+
+  .el-input__suffix-inner {
+    font-size: 2.4rem;
+    line-height: 5rem;
+
+    @media @mobile {
+      font-size: 1.6rem;
+      height: 3rem;
+      line-height: 3rem;
+    }
+  }
+
+  .el-form-item__label {
+    font-size: 2.4rem;
+
+    @media @mobile {
+      padding: 0;
+      font-size: 1.4rem;
+    }
+  }
+
+  .dialog-mobile-btn {
+    display: none;
+
+    @media @mobile {
+      display: block;
+      width: 100%;
+      height: 3.4rem;
+      color: white;
+      background: #4ED6CD;
+      margin-top: 1.6rem;
+      box-shadow: inset .2rem .2rem .6rem .1rem #C3FFFB;
+      border-radius: .5rem;
+    }
+  }
+}
+
+.v-modal {
+  z-index: 12 !important;
+}
+
+.accountMneu {
+  width: 20rem;
+  background-color: #0b1324 !important;
+
+  .el-dropdown-menu__item {
+    color: white !important;
+    font-size: 1.6rem;
+    text-align: center;
+
+    &:hover {
+      color: #d43b81 !important;
+      background-color: #0b1324 !important;
+    }
+  }
+
+  .popper__arrow {
+    @media @desktop {
+      top: -7px !important;
+    }
+  }
+}
+
+.el-button {
+  border: none !important;
+}
